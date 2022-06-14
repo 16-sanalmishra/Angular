@@ -7,13 +7,18 @@
   <div class="row">
     <div class="col">
       <ul class="nav nav-tabs">
-        <li
+        <li role="presentation" class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/"></a>
+        </li>
+      </ul>
+      <router-outlet></router-outlet>
+      <!-- <li
           role="presentation"
           class="nav-item"
           routerLinkActive="active"
           [routerLinkActiveOptions]="{ exact: true }"
         >
-          <a class="nav-link" routerLink="/">Home</a>
+          <a class="nav-link" routerLink="home">Home</a>
         </li>
         <li role="presentation" class="nav-item" routerLinkActive="active">
           <a class="nav-link" routerLink="products">Products</a>
@@ -49,8 +54,8 @@
     <div class="col">
       <router-outlet></router-outlet>
     </div>
-  </div>
-  <!-- <div class="row">
+  </div> -->
+      <!-- <div class="row">
     <div class="col">
       <app-home></app-home>
     </div>
@@ -70,4 +75,6 @@
       <app-accounts></app-accounts>
     </div>
   </div> -->
+    </div>
+  </div>
 </div>

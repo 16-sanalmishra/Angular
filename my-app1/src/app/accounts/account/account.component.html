@@ -1,14 +1,14 @@
 <div class="row mb-2">
   <div class="col">
     <span class="h4">{{ account.name }}</span>
-    <span class="p-3">This account is {{ account.status }}</span>
+    <span class="p-3">This Food Item is {{ account.status }}</span>
   </div>
   <div class="col">
     <div class="btn-group">
       <button class="btn btn-outline-primary" (click)="changeStatus('Active')">
-        Active
+        Send Request
       </button>
-      <button
+      <!-- <button
         class="btn btn-outline-secondary"
         (click)="changeStatus('InActive')"
       >
@@ -16,7 +16,7 @@
       </button>
       <button class="btn btn-outline-dark" (click)="changeStatus('Hidden')">
         Hidden
-      </button>
+      </button> -->
       <button class="btn btn-danger" (click)="accountDeleted()">Delete</button>
     </div>
   </div>

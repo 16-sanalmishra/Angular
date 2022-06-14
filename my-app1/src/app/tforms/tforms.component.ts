@@ -14,6 +14,8 @@ export class TFormsComponent implements OnInit {
     email: '',
     secret: '',
     gender: '',
+    phone:'',
+    name:''
   };
   constructor() {}
 

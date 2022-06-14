@@ -9,15 +9,18 @@ export class UsersComponent implements OnInit {
   users = [
     {
       id: 1,
-      name: 'Max',
+      name: 'Sanal',
+      username:'sanal@gmail.com'
     },
     {
       id: 2,
       name: 'John',
+      username:'user2@gmail.com'
     },
     {
       id: 3,
       name: 'Robert',
+      username:'user3@gmail.com'
     },
   ];
 

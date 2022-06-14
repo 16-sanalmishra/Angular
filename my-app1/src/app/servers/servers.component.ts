@@ -9,28 +9,28 @@ export class ServersComponent implements OnInit {
   filteredStatus = '';
   servers = [
     {
-      name: 'QA Server',
-      instanceType: 'medium',
+      name: 'Rohan',
+      instanceType: '34',
       started: new Date(2017, 1, 15),
-      status: 'stable',
+      status: 'Available',
     },
     {
-      name: 'Prod',
-      instanceType: 'large',
+      name: 'Rakesh',
+      instanceType: '40',
       started: new Date(2018, 8, 11),
-      status: 'stable',
+      status: 'Available',
     },
     {
-      name: 'Development Server',
-      instanceType: 'small',
+      name: 'Prakash',
+      instanceType: '30',
       started: new Date(),
-      status: 'offline',
+      status: 'Not Available',
     },
     {
-      name: 'DB Server',
-      instanceType: 'large',
+      name: 'Ritik',
+      instanceType: '43',
       started: new Date(2020, 7, 22),
-      status: 'critical',
+      status: 'Available',
     },
   ];
   constructor() {}
@@ -38,9 +38,9 @@ export class ServersComponent implements OnInit {
   ngOnInit(): void {}
   getStatusClasses(status: string) {
     return {
-      'list-group-item-success': status === 'stable',
-      'list-group-item-warning': status === 'offline',
-      'list-group-item-danger': status === 'critical',
+      'list-group-item-success': status === 'Available',
+      // 'list-group-item-warning': status === 'offline',
+      'list-group-item-danger': status === 'Not Available',
     };
   }
 }

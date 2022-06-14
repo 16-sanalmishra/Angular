@@ -11,6 +11,7 @@ import { NgForm } from '@angular/forms';
 })
 export class BlogComponent implements OnInit {
   fetchedPosts: PostData[] = [];
+  submitted = false;
 
   constructor(private http: HttpClient) {}
   firebaseUrl =
@@ -55,5 +56,8 @@ export class BlogComponent implements OnInit {
       .subscribe((posts) => {
         this.fetchedPosts = posts;
       });
+  }
+  onSubmit(){
+    this.submitted=true;
   }
 }

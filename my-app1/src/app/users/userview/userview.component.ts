@@ -10,6 +10,7 @@ export class UserviewComponent implements OnInit {
   user: {
     id: number;
     name: string;
+    username:string;
   };
 
   constructor() {}

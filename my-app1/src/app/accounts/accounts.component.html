@@ -1,13 +1,60 @@
-<div class="container m-2">
-  <div class="row">
-    <div class="col">
-      <app-new-account></app-new-account>
-      <br />
-      <app-account
-        *ngFor="let account of accounts; let i = index"
-        [account]="account"
-        [id]="i"
-      ></app-account>
+<div class="page-wrapper">
+  <!-- MENU SIDEBAR-->
+  <aside class="menu-sidebar d-none d-lg-block">
+    <div class="logo">
+      <a routerLink="/products">
+        <img src="assets/logo-new.png" alt="food box" class="img-responsive" />
+      </a>
+    </div>
+  </aside>
+  <!-- END MENU SIDEBAR-->
+  <div class="page-container">
+    <!-- HEADER DESKTOP-->
+    <header class="header-desktop">
+      <div class="section-content section-content-p30">
+        <div class="container-fluid">
+          <div class="header-wrap">
+            <div class="container float-right">
+              <div class="row">
+                <div class="col">
+                  <ul class="nav nav-tabs">
+                    <li
+                      role="presentation"
+                      class="nav-item"
+                      routerLinkActive="active"
+                    >
+                      <a class="nav-link link-light" routerLink="/">Logout</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </header>
+
+    <br /><br /><br />
+    <div class="container m-2">
+      <div class="row">
+        <div class="col">
+          <app-new-account></app-new-account>
+          <br />
+          <app-account
+            *ngFor="let account of accounts; let i = index"
+            [account]="account"
+            [id]="i"
+          ></app-account>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+<footer class="fixed-bottom">
+  <ul>
+    <li><a href="#">About Us</a></li>
+    <li><a href="#">Contact Us</a></li>
+    <li><a href="#">Help</a></li>
+  </ul>
+</footer>

@@ -1,0 +1,98 @@
+<div class="page-wrapper">
+  <!-- MENU SIDEBAR-->
+  <aside class="menu-sidebar d-none d-lg-block">
+    <div class="logo">
+      <a routerLink="/products">
+        <img src="assets/logo-new.png" alt="food box" class="img-responsive" />
+      </a>
+    </div>
+  </aside>
+  <!-- END MENU SIDEBAR-->
+  <div class="page-container">
+    <!-- HEADER DESKTOP-->
+    <header class="header-desktop">
+      <div class="section-content section-content-p30">
+        <div class="container-fluid">
+          <div class="header-wrap">
+            <div class="container float-right">
+              <div class="row">
+                <div class="col">
+                  <ul class="nav nav-tabs">
+                    <li
+                      role="presentation"
+                      class="nav-item"
+                      routerLinkActive="active"
+                    >
+                      <a class="nav-link link-light" routerLink="/">Home</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <router-outlet></router-outlet>
+    </header>
+
+    <br /><br /><br />
+
+    <h1 style="text-align: center">Welcome To FoodBox</h1>
+    <div class="container mx-auto" style="width: 400px">
+      <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
+          <div class="row">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input
+                type="text"
+                id="username"
+                class="form-control"
+                ngModel
+                name="username"
+                required
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                ngModel
+                name="email"
+                required
+                email
+                #email="ngModel"
+              />
+              <span class="help-block" *ngIf="!email.valid && email.touched"
+                >Please enter a valid email</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <button
+          class="btn btn-primary m-2"
+          type="submit"
+          [disabled]="!f.valid"
+          routerLink="/adminsuccess"
+        >
+          SignIn
+        </button>
+      </form>
+      <div class="row" *ngIf="submitted">
+        <div class="col"></div>
+      </div>
+    </div>
+    <footer class="fixed-bottom">
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </footer>
+  </div>
+</div>

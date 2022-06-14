@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -26,10 +26,25 @@ import { TFormsComponent } from './tforms/tforms.component';
 import { RFormsComponent } from './rforms/rforms.component';
 import { BlogComponent } from './blog/blog.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { AdminComponent } from './admin/admin.component';
+
+import { LoginComponent } from './login/login.component';
+import { AdminsuccessComponent } from './adminsuccess/adminsuccess.component';
+import { ReportComponent } from './report/report.component';
+import { UsersuccessComponent } from './usersuccess/usersuccess.component';
+import { UserloginComponent } from './userlogin/userlogin.component';
+import { CarditemComponent } from './carditem/carditem.component';
+import { PaymentComponent } from './payment/payment.component';
+import { CartComponent } from './cart/cart.component';
+import { SearchComponent } from './search/search.component';
+import { CartitemComponent } from './cartitem/cartitem.component';
+import { InfoComponent } from './info/info.component';
+import { AdminsearchComponent } from './adminsearch/adminsearch.component';
 
 
 const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'numbers', component: NumbersComponent },
   { path: 'accounts', component: AccountsComponent },
@@ -40,6 +55,20 @@ const appRoutes: Routes = [
   { path: 'tforms', component: TFormsComponent },
   { path: 'rforms', component: RFormsComponent },
   { path: 'blog', component: BlogComponent },
+  {path:'', component:LandingPageComponent},
+  {path:'admin' , component:AdminComponent},
+  {path:'login' , component:LoginComponent},
+  {path:'adminsuccess' , component:AdminsuccessComponent},
+  {path:'report' , component:ReportComponent},
+  {path:'usersuccess' , component:UsersuccessComponent},
+  {path:'userlogin' , component:UserloginComponent},
+  {path:'carditem' , component:CarditemComponent},
+  {path:'payment' , component:PaymentComponent},
+  {path:'cart' , component:CartComponent},
+  {path:'search' , component:SearchComponent},
+  {path:'cartitem' , component:CarditemComponent},
+  {path:'info' , component:InfoComponent},
+  {path:'adminsearch' , component:AdminsearchComponent},
 
 ];
 
@@ -67,6 +96,21 @@ const appRoutes: Routes = [
     TFormsComponent,
     RFormsComponent,
     BlogComponent,
+    LandingPageComponent,
+    AdminComponent,
+    
+    LoginComponent,
+         AdminsuccessComponent,
+         ReportComponent,
+         UsersuccessComponent,
+         UserloginComponent,
+         CarditemComponent,
+         PaymentComponent,
+         CartComponent,
+         SearchComponent,
+         CartitemComponent,
+         InfoComponent,
+         AdminsearchComponent,
   ],
   imports: [BrowserModule, FormsModule, RouterModule.forRoot(appRoutes),ReactiveFormsModule,HttpClientModule],
   providers: [],

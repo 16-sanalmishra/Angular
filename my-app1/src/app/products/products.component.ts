@@ -28,7 +28,7 @@ import {
 export class ProductsComponent {
   products = [
     {
-      name: 'Laptop',
+      name: 'Burger',
       stock: 200,
       availability: 'In Stock',
     },

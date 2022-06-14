@@ -3,16 +3,16 @@ import { EventEmitter } from '@angular/core';
 export class AccountService {
   accounts = [
     {
-      name: 'Master Account',
-      status: 'Active',
+      name: 'Burger',
+      status: 'Required',
     },
     {
-      name: 'Test Account',
-      status: 'InActive',
+      name: 'Pizza',
+      status: 'Not Required',
     },
     {
-      name: 'Hidden Account',
-      status: 'Unknown',
+      name: 'Dosa',
+      status: 'Required',
     },
   ];
 
